@@ -1,3 +1,7 @@
+## Note:
+
+This is a temporary branch of PHPGGC, which includes PHARGGC a secondary tool which can be used to encapusalte PHPGGC's payloads in a Phar archive. This can then be used to exploit a variety of exploit scenarios where we can cause a target application to access the archive through the "phar://" stream wrapper. More details on the attack are available in the [whitepaper](http://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-It%27s-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It-wp.pdf) and [slides](http://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-It%27s-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It.pdf) from Black Hat USA 2018.
+
 # PHPGGC: PHP Generic Gadget Chains
 
 *PHPGGC is a library of unserialize() payloads along with a tool to generate them, from command line or programmatically*.
@@ -111,6 +115,17 @@ And you'd call phpggc like so:
 ```
 $ ./phpggc -w /tmp/my_wrapper.php slim/rce1 'phpinfo();'
 a:1:{s:7:"message";O:18:"Slim\Http\Response":2:{...}}
+```
+
+## PHARGGC Usage
+
+PHARGGC can operate in two different modes. In the first mode output a Phar archive in the base format with the content of a specified file prepended to the stub, for example:
+```
+$ ./pharggc -p prefix.file -o output.file Guzzle/RCE1 'uname -a'
+```
+In the second mode it will produce a JPEG/Tar polyglot Phar archive:
+```
+$ ./pharggc -j input.jpg -o output.jpg Guzzle/RCE1 'ls -l'
 ```
 
 ## Contributing
