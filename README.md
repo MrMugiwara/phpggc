@@ -1,6 +1,6 @@
 ## Note:
 
-This is a temporary branch of PHPGGC, which includes PHARGGC a secondary tool which can be used to encapusalte PHPGGC's payloads in a Phar archive. This can then be used to exploit a variety of exploit scenarios where we can cause a target application to access the archive through the "phar://" stream wrapper. More details on the attack are available in the [whitepaper](http://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-It%27s-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It-wp.pdf) and [slides](http://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-It%27s-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It.pdf) from Black Hat USA 2018.
+This is a temporary branch of PHPGGC, which includes PHARGGC a secondary tool which can be used to encapusalte PHPGGC's payloads in a Phar archive. This can then be used to exploit a variety of exploit scenarios where we can cause a target application to access the archive through the "phar://" stream wrapper. More details on the attack are available in the [whitepaper]https://github.com/s-n-t/presentations/raw/master/us-18-Thomas-It's-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It-wp.pdf) and [slides](https://github.com/s-n-t/presentations/raw/master/us-18-Thomas-It's-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It.pdf) from Black Hat USA 2018.
 
 # PHPGGC: PHP Generic Gadget Chains
 
