@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once('lib/PHARGGC.php');
+
+$x = new PHARGGC();
+
+try
+{
+    $x->generate();
+}
+catch(\PHPGGC\Exception $e)
+{
+    print("ERROR: " . $e->getMessage() . "\n");
+}
